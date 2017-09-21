@@ -39,7 +39,6 @@ public class Game implements Runnable {
         // CLEAR
         g.clearRect(0,0, width, height);
         // DRAW
-        g.fillRect(0, 0, 100, 100);
 
         // END_DRAW*/
         bs.show();
