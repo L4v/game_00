@@ -1,9 +1,13 @@
 package main;
 
 import display.Display;
+import gfx.Assets;
+import gfx.ImageLoader;
+import gfx.Spritesheet;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
 
 public class Game implements Runnable {
 
@@ -17,6 +21,7 @@ public class Game implements Runnable {
     private BufferStrategy bs;
     private Graphics g;
 
+
     public Game(String title, int width, int height) {
         this.width = width;
         this.height = height;
@@ -25,31 +30,33 @@ public class Game implements Runnable {
 
     }
 
+    private void init() {
+        display = new Display(title, width, height);
+        Assets.init();
+    }
+
+
     private void update() {
 
     }
 
     private void render() {
         bs = display.getCanvas().getBufferStrategy();
-        if(bs == null){
+        if (bs == null) {
             display.getCanvas().createBufferStrategy(3);
             return;
         }
         g = bs.getDrawGraphics();
         // CLEAR
-        g.clearRect(0,0, width, height);
+        g.clearRect(0, 0, width, height);
         // DRAW
-
+        g.drawImage(Assets.black, 30, 30, null);
         // END_DRAW*/
         bs.show();
         g.dispose();
 
     }
 
-    private void init() {
-        display = new Display(title, width, height);
-
-    }
 
     public void run() {
         init();
