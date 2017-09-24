@@ -4,6 +4,9 @@ import display.Display;
 import gfx.Assets;
 import gfx.ImageLoader;
 import gfx.Spritesheet;
+import states.GameState;
+import states.MenuState;
+import states.State;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -21,6 +24,10 @@ public class Game implements Runnable {
     private BufferStrategy bs;
     private Graphics g;
 
+    // STATES
+    private State gameState;
+    private State menuState;
+
 
     public Game(String title, int width, int height) {
         this.width = width;
@@ -33,12 +40,16 @@ public class Game implements Runnable {
     private void init() {
         display = new Display(title, width, height);
         Assets.init();
+
+        gameState = new GameState();
+        menuState = new MenuState();
+        State.setState(gameState);
     }
 
-    int x = 0;
 
     private void update() {
-        x += 1;
+        if(State.getCurrState() != null)
+            State.getCurrState().update();
     }
 
     private void render() {
@@ -51,7 +62,10 @@ public class Game implements Runnable {
         // CLEAR
         g.clearRect(0, 0, width, height);
         // DRAW
-        g.drawImage(Assets.black, x, 30, null);
+
+        if(State.getCurrState() != null)
+            State.getCurrState().render(g);
+
         // END_DRAW*/
         bs.show();
         g.dispose();
