@@ -1,6 +1,6 @@
 package worlds;
 
-import main.Game;
+import main.Handler;
 import tiles.Tile;
 import utils.Utils;
 
@@ -8,13 +8,13 @@ import java.awt.*;
 
 public class World {
 
-    private Game game;
+    private Handler handler;
     private int width, height;
     private int spawnX, spawnY;
     private int[][] tiles;
 
-    public World(Game game, String path) {
-        this.game = game;
+    public World(Handler handler, String path) {
+        this.handler = handler;
         loadWorld(path);
     }
 
@@ -24,10 +24,15 @@ public class World {
     }
 
     public void render(Graphics g) {
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                getTile(x, y).render(g, (int)(x * Tile.TILE_WIDTH - game.getGameCamera().getxOff()),
-                        (int)(y * Tile.TILE_HEIGHT - game.getGameCamera().getyOff()));
+        int xStart = (int) Math.max(0, handler.getGameCamera().getxOff() / Tile.TILE_WIDTH);// Tile from which you start rendering
+        int xEnd = (int) Math.min(width, (handler.getGameCamera().getxOff() + handler.getWidth()) / Tile.TILE_WIDTH + 1);
+        int yStart = (int) Math.max(0, handler.getGameCamera().getyOff() / Tile.TILE_HEIGHT);
+        int yEnd = (int) Math.min(height, (handler.getGameCamera().getyOff() + handler.getHeight()) / Tile.TILE_HEIGHT + 1);
+
+        for (int y = yStart; y < yEnd; y++) {
+            for (int x = xStart; x < xEnd; x++) {
+                getTile(x, y).render(g, (int) (x * Tile.TILE_WIDTH - handler.getGameCamera().getxOff()),
+                        (int) (y * Tile.TILE_HEIGHT - handler.getGameCamera().getyOff()));
             }
         }
     }
