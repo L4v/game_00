@@ -3,6 +3,7 @@ package entities.creatures;
 import entities.Entity;
 import main.Game;
 import main.Handler;
+import tiles.Tile;
 
 public abstract class Creature extends Entity {
 
@@ -26,8 +27,58 @@ public abstract class Creature extends Entity {
     }
 
     public void move() {
-        x += xMove;
-        y += yMove;
+        moveX();
+        moveY();
+    }
+
+    public void moveX() {
+        if (xMove > 0) {// MOVING RIGHT
+            int tx = (int) (x + xMove + bounds.x + bounds.width) / Tile.TILE_WIDTH;
+
+            if (!collisionWitchTile(tx, (int) (y + bounds.y) / Tile.TILE_HEIGHT) &&
+                    !collisionWitchTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILE_HEIGHT)) {
+                x += xMove;
+            }else{
+                x = tx * Tile.TILE_WIDTH - bounds.x - bounds.width - 1;
+            }
+
+        } else if (xMove < 0) {// MOVING LEFT
+            int tx = (int) (x + xMove + bounds.x) / Tile.TILE_WIDTH;
+
+            if (!collisionWitchTile(tx, (int) (y + bounds.y) / Tile.TILE_HEIGHT) &&
+                    !collisionWitchTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILE_HEIGHT)) {
+                x += xMove;
+            }else{
+                x = tx*Tile.TILE_WIDTH + Tile.TILE_WIDTH - bounds.x;
+            }
+        }
+    }
+
+    public void moveY() {
+        if (yMove < 0) {// MOVING UP
+            int ty = (int) (y + yMove + bounds.y) / Tile.TILE_HEIGHT;
+
+            if (!collisionWitchTile((int) (x + bounds.x) / Tile.TILE_WIDTH, ty) &&
+                    !collisionWitchTile((int) (x + bounds.x + bounds.width) / Tile.TILE_WIDTH, ty)) {
+                y += yMove;
+            }else{
+                y = ty* Tile.TILE_HEIGHT + Tile.TILE_HEIGHT - bounds.y;
+            }
+
+        } else if (yMove > 0) {// MOVING DOWN
+            int ty = (int) (y + yMove + bounds.y + bounds.height) / Tile.TILE_HEIGHT;
+
+            if (!collisionWitchTile((int) (x + bounds.x) / Tile.TILE_WIDTH, ty) &&
+                    !collisionWitchTile((int) (x + bounds.x + bounds.width) / Tile.TILE_WIDTH, ty)) {
+                y += yMove;
+            }else{
+                y = ty*Tile.TILE_HEIGHT - bounds.y - bounds.height - 1;
+            }
+        }
+    }
+
+    protected boolean collisionWitchTile(int x, int y) {
+        return handler.getWorld().getTile(x, y).isSolid();
     }
 
     // GETTERS AND SETTERS

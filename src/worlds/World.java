@@ -38,6 +38,9 @@ public class World {
     }
 
     public Tile getTile(int x, int y) {
+        if (x < 0 || y < 0 || x >= width || y >= height)
+            return Tile.blackTile;
+
         Tile t = Tile.tiles[tiles[x][y]];
         if (t == null)
             return Tile.blackTile;
@@ -60,4 +63,12 @@ public class World {
         }
 
     }
+    // GETTERS
+    public int getWidth(){
+        return width;
+    }
+    public int getHeight(){
+        return height;
+    }
+
 }
