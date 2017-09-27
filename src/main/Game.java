@@ -2,8 +2,7 @@ package main;
 
 import display.Display;
 import gfx.Assets;
-import gfx.ImageLoader;
-import gfx.Spritesheet;
+import gfx.GameCamera;
 import input.KeyManager;
 import states.GameState;
 import states.MenuState;
@@ -11,7 +10,6 @@ import states.State;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
-import java.awt.image.BufferedImage;
 
 public class Game implements Runnable {
 
@@ -20,7 +18,7 @@ public class Game implements Runnable {
 
     // VARS
     private boolean running = false;
-    public int width, height;
+    private int width, height;
     public String title;
 
     private BufferStrategy bs;
@@ -33,6 +31,8 @@ public class Game implements Runnable {
     // INPUT
     private KeyManager keyManager;
 
+    // CAMERA
+    private GameCamera gameCamera;
 
     public Game(String title, int width, int height) {
         this.width = width;
@@ -46,6 +46,8 @@ public class Game implements Runnable {
         display.getFrame().addKeyListener(keyManager);
         Assets.init();
 
+        gameCamera = new GameCamera(this, 0, 0);
+
         gameState = new GameState(this);
         menuState = new MenuState(this);
         State.setState(gameState);
@@ -55,7 +57,7 @@ public class Game implements Runnable {
     private void update() {
         keyManager.update();
 
-        if(State.getCurrState() != null)
+        if (State.getCurrState() != null)
             State.getCurrState().update();
     }
 
@@ -70,7 +72,7 @@ public class Game implements Runnable {
         g.clearRect(0, 0, width, height);
         // DRAW
 
-        if(State.getCurrState() != null)
+        if (State.getCurrState() != null)
             State.getCurrState().render(g);
 
         // END_DRAW*/
@@ -85,7 +87,7 @@ public class Game implements Runnable {
         init();
 
         int fps = 60;
-        double timePerUpdate = 1e9/fps;
+        double timePerUpdate = 1e9 / fps;
         double delta = 0;
         long now;
         long lastTime = System.nanoTime();
@@ -94,17 +96,17 @@ public class Game implements Runnable {
 
         while (running) {
             now = System.nanoTime();
-            delta += (now-lastTime)/timePerUpdate;
+            delta += (now - lastTime) / timePerUpdate;
             timer += now - lastTime;
             lastTime = now;
 
-            if(delta >= 1) {
+            if (delta >= 1) {
                 update();
                 render();
-                ticks ++;
-                delta --;
+                ticks++;
+                delta--;
             }
-            if(timer >= 1e9){
+            if (timer >= 1e9) {
 
                 ticks = 0;
                 timer = 0;
@@ -114,9 +116,24 @@ public class Game implements Runnable {
 
     }
 
-    public KeyManager getKeyManager(){
+    // GETTERS START
+    public KeyManager getKeyManager() {
         return keyManager;
     }
+
+    public GameCamera getGameCamera() {
+        return gameCamera;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    //GETTERS END
 
     public synchronized void start() {
         if (running)
