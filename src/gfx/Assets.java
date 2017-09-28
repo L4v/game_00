@@ -14,10 +14,15 @@ public class Assets {
 
     public static void init() {
         Spritesheet sheet = new Spritesheet(ImageLoader.loadImage("/textures/spritesheet.png"));
+        Spritesheet ui_sheet = new Spritesheet(ImageLoader.loadImage("/textures/ui_sheet.png"));
         Spritesheet flame_sheet = new Spritesheet(ImageLoader.loadImage("/textures/campfire.png"));
 
         red_walking = new BufferedImage[2];
         camp_fire = new BufferedImage[5];
+        btn_start = new BufferedImage[2];
+
+        btn_start[0] = ui_sheet.crop(0,0,256, 128);
+        btn_start[1] = ui_sheet.crop(256,0,256, 128);
 
         red_walking[0] = sheet.crop(WIDTH*2, 0, WIDTH, HEIGHT);
         red_walking[1] = sheet.crop(WIDTH*3,0,WIDTH,HEIGHT);
