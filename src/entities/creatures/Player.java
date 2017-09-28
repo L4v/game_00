@@ -15,6 +15,7 @@ public class Player extends Creature {
 
     public Player(Handler handler, float x, float y) {
         super(handler, x, y, Creature.DEFAULT_CREATURE_WIDTH, Creature.DEFAULT_CREATURE_HEIGHT);
+        // BOUNDS FOR COLLISION
         bounds.x = 0;
         bounds.y = 0;
         bounds.width = width - 1;
@@ -57,14 +58,16 @@ public class Player extends Creature {
                 (int)(y + bounds.y - handler.getGameCamera().getyOff()), bounds.width, bounds.height);
                 */
     }
-    private BufferedImage getCurrAnimationFrame(){
-        if(xMove < 0)// MOVING LEFT
+
+    private BufferedImage getCurrAnimationFrame() {
+        if (xMove < 0)// MOVING LEFT
             return animWalk.getCurFrame();// ADD ANIMATION FOR MOVING LEFT
-        else if(xMove > 0)// MOVING RIGHT
+        else if (xMove > 0)// MOVING RIGHT
             return animWalk.getCurFrame();// ADD ANIMATION FOR MOVING RIGHT
-        else if(yMove < 0)// MOVING UP
+        else if (yMove < 0)// MOVING UP
             return animWalk.getCurFrame();// ADD ANIMATION FOR MOVING UP
-        else if(yMove > 0)// MOVING DOWN
+        else if (yMove > 0)// MOVING DOWN
             return animWalk.getCurFrame();// ADD ANIMATION FOR MOVING DOWN
+        return animWalk.getCurFrame();
     }
 }

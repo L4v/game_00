@@ -1,5 +1,8 @@
 package worlds;
 
+import entities.EntityManager;
+import entities.creatures.Player;
+import entities.statics.CampFire;
 import main.Handler;
 import tiles.Tile;
 import utils.Utils;
@@ -13,14 +16,24 @@ public class World {
     private int spawnX, spawnY;
     private int[][] tiles;
 
+    // ENTITIES
+    private EntityManager entityManager;
+
     public World(Handler handler, String path) {
         this.handler = handler;
+
+        entityManager = new EntityManager(handler, new Player(handler, 100, 100));
+        entityManager.addEntity(new CampFire(handler, 100, 100));
+
         loadWorld(path);
+
+        entityManager.getPlayer().setX(spawnX);
+        entityManager.getPlayer().setY(spawnY);
     }
 
 
     public void update() {
-
+        entityManager.update();
     }
 
     public void render(Graphics g) {
@@ -35,6 +48,8 @@ public class World {
                         (int) (y * Tile.TILE_HEIGHT - handler.getGameCamera().getyOff()));
             }
         }
+        // ENTITY RENDER
+        entityManager.render(g);
     }
 
     public Tile getTile(int x, int y) {
@@ -63,12 +78,18 @@ public class World {
         }
 
     }
+
     // GETTERS
-    public int getWidth(){
+    public int getWidth() {
         return width;
     }
-    public int getHeight(){
+
+    public int getHeight() {
         return height;
+    }
+
+    public EntityManager getEntityManager() {
+        return entityManager;
     }
 
 }

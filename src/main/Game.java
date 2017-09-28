@@ -4,6 +4,7 @@ import display.Display;
 import gfx.Assets;
 import gfx.GameCamera;
 import input.KeyManager;
+import input.MouseManager;
 import states.GameState;
 import states.MenuState;
 import states.State;
@@ -25,11 +26,12 @@ public class Game implements Runnable {
     private Graphics g;
 
     // STATES
-    private State gameState;
-    private State menuState;
+    public State gameState;
+    public State menuState;
 
     // INPUT
     private KeyManager keyManager;
+    private MouseManager mouseManager;
 
     // CAMERA
     private GameCamera gameCamera;
@@ -42,11 +44,17 @@ public class Game implements Runnable {
         this.height = height;
         this.title = title;
         keyManager = new KeyManager();
+        mouseManager = new MouseManager();
     }
 
+    // INIT
     private void init() {
         display = new Display(title, width, height);
         display.getFrame().addKeyListener(keyManager);
+        display.getFrame().addMouseListener(mouseManager);
+        display.getFrame().addMouseMotionListener(mouseManager);
+        display.getCanvas().addMouseListener(mouseManager);
+        display.getCanvas().addMouseMotionListener(mouseManager);
         Assets.init();
 
         handler = new Handler(this);
@@ -54,7 +62,7 @@ public class Game implements Runnable {
 
         gameState = new GameState(handler);
         menuState = new MenuState(handler);
-        State.setState(gameState);
+        State.setState(menuState);
     }
 
 
@@ -111,7 +119,7 @@ public class Game implements Runnable {
                 delta--;
             }
             if (timer >= 1e9) {
-
+                System.out.println(ticks);
                 ticks = 0;
                 timer = 0;
             }
@@ -135,6 +143,10 @@ public class Game implements Runnable {
 
     public int getHeight() {
         return height;
+    }
+
+    public MouseManager getMouseManager() {
+        return mouseManager;
     }
 
     //GETTERS END
