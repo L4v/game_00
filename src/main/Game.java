@@ -87,6 +87,8 @@ public class Game implements Runnable {
         if (State.getCurrState() != null)
             State.getCurrState().render(g);
 
+
+
         // END_DRAW*/
         bs.show();
         g.dispose();

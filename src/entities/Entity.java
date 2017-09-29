@@ -74,5 +74,11 @@ public abstract class Entity {
         this.height = height;
     }
 
+    public int getCenterX(){
+        return (int) (x - handler.getGameCamera().getxOff());
+    }
+    public int getCenterY(){
+        return (int) (y + bounds.y - handler.getGameCamera().getyOff());
+    }
 
 }
