@@ -22,6 +22,7 @@ public abstract class Creature extends Entity {
         speed = DEFAULT_SPEED;
         xMove = 0;
         yMove = 0;
+        dir = DOWN;
 
     }
 
@@ -39,10 +40,10 @@ public abstract class Creature extends Entity {
             if (!collisionWithTile(tx, (int) (y + bounds.y) / Tile.TILE_HEIGHT) &&
                     !collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILE_HEIGHT)) {
                 x += xMove;
+                dir = RIGHT;
             } else {
                 x = tx * Tile.TILE_WIDTH - bounds.x - bounds.width - 1;
             }
-            dir = RIGHT;
 
         } else if (xMove < 0) {// MOVING LEFT
             int tx = (int) (x + xMove + bounds.x) / Tile.TILE_WIDTH;
@@ -50,10 +51,10 @@ public abstract class Creature extends Entity {
             if (!collisionWithTile(tx, (int) (y + bounds.y) / Tile.TILE_HEIGHT) &&
                     !collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILE_HEIGHT)) {
                 x += xMove;
+                dir = LEFT;
             } else {
                 x = tx * Tile.TILE_WIDTH + Tile.TILE_WIDTH - bounds.x;
             }
-            dir = LEFT;
         }
     }
 
@@ -64,10 +65,10 @@ public abstract class Creature extends Entity {
             if (!collisionWithTile((int) (x + bounds.x) / Tile.TILE_WIDTH, ty) &&
                     !collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILE_WIDTH, ty)) {
                 y += yMove;
+                dir = UP;
             } else {
                 y = ty * Tile.TILE_HEIGHT + Tile.TILE_HEIGHT - bounds.y;
             }
-            dir = UP;
 
         } else if (yMove > 0) {// MOVING DOWN
             int ty = (int) (y + yMove + bounds.y + bounds.height) / Tile.TILE_HEIGHT;
@@ -75,10 +76,10 @@ public abstract class Creature extends Entity {
             if (!collisionWithTile((int) (x + bounds.x) / Tile.TILE_WIDTH, ty) &&
                     !collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILE_WIDTH, ty)) {
                 y += yMove;
+                dir = DOWN;
             } else {
                 y = ty * Tile.TILE_HEIGHT - bounds.y - bounds.height - 1;
             }
-            dir = DOWN;
         }
     }
 

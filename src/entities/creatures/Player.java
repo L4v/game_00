@@ -1,5 +1,6 @@
 package entities.creatures;
 
+import entities.Entity;
 import gfx.Animation;
 import gfx.Assets;
 import main.Handler;
@@ -11,6 +12,8 @@ public class Player extends Creature {
 
     // ANIMATIONS
     private Animation animWalk;//ADD DOWN LEFT RIGHT UP IF NEEDED
+    // COMBAT TIMER
+    private long lastAttackTimer, attackCooldown = 800, attackTimer = attackCooldown;
 
     public Player(Handler handler, float x, float y) {
         super(handler, x, y, Creature.DEFAULT_CREATURE_WIDTH, Creature.DEFAULT_CREATURE_HEIGHT);
@@ -37,16 +40,47 @@ public class Player extends Creature {
     }
 
     private void checkAttacks() {
+        attackTimer += System.currentTimeMillis() - lastAttackTimer;
+        lastAttackTimer = System.currentTimeMillis();
+        if(attackTimer < attackCooldown)
+            return;
+
         Rectangle cb = getCollisionBounds(0, 0);// COLLISION BOUNDS RECTANGLE
         Rectangle ar = new Rectangle();// ATTACK RECTANGLE ( TEMP )
         int arSize = 20;// SIZE OF AR ( RANGE )
         ar.width = ar.height = arSize;
 
         if (handler.getKeyManager().attack) {
-            if (dir == UP) {
+            if (dir == UP) {// ATTACKING UP
                 ar.x = cb.x + cb.width / 2 - arSize / 2;
-                
+                ar.y = cb.y - arSize;
+                System.out.println("Attacking UP");
+            } else if (dir == DOWN) {// ATTACKING DOWN
+                ar.x = cb.x + cb.width / 2 - arSize / 2;
+                ar.y = cb.y + cb.height;
+                System.out.println("Attacking DOWN");
+            } else if (dir == LEFT) {// ATTACKING LEFT
+                ar.x = cb.x - arSize;
+                ar.y = cb.y + cb.height / 2 - arSize / 2;
+                System.out.println("Attacking LEFT");
+            } else if (dir == RIGHT) {// ATTACKING RIGHT
+                ar.x = cb.x + cb.width;
+                ar.y = cb.y + cb.height / 2 - arSize / 2;
+                System.out.println("Attacking RIGHT");
+            } else {
+                return;
             }
+
+            for (Entity e : handler.getWorld().getEntityManager().getEntities()) {
+                if(e.equals(this))
+                    continue;
+                if(e.getCollisionBounds(0,0).intersects(ar)){
+                    e.hurt(10);
+                    return;
+                }
+                attackTimer = 0;
+            }
+
         }
     }
 
