@@ -29,6 +29,11 @@ public class CampFire extends StaticEntity {
     }
 
     @Override
+    public void die(){
+        
+    }
+
+    @Override
     public void render(Graphics g) {
         g.drawImage(getCurrAnimationFrame(), (int)(x - handler.getGameCamera().getxOff()), (int)(y - handler.getGameCamera().getyOff()), width, height, null);
         // COLLISION BOX

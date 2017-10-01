@@ -8,9 +8,14 @@ import java.awt.*;
 public abstract class Entity {
 
     protected Handler handler;
+    protected Rectangle bounds;
+
+    public static final int DEFAULT_HEALTH = 100;
     protected float x, y;
     protected int width, height;
-    protected Rectangle bounds;
+    protected int hp;
+
+    protected boolean alive = true;
 
     public Entity(Handler handler, float x, float y, int width, int height) {
         this.handler = handler;
@@ -18,14 +23,25 @@ public abstract class Entity {
         this.y = y;
         this.width = width;
         this.height = height;
+        hp = DEFAULT_HEALTH;
 
         bounds = new Rectangle(0, 0, width, height);
     }
 
 
-    public abstract void update();
+    public abstract void update();// TICKS THE ENTITY
 
-    public abstract void render(Graphics g);
+    public abstract void render(Graphics g);// DRAWS THE ENTITY
+
+    public abstract void die();// KILLS THE ENTITY
+
+    public void hurt(int amt){// DECREASES HEALTH BY AMT
+        hp -= amt;
+        if(hp <= 0){
+            alive = false;
+            die();
+        }
+    }
 
     public boolean checkEntityCollisions(float xOff, float yOff) {
         for (Entity e : handler.getWorld().getEntityManager().getEntities()) {
@@ -42,6 +58,23 @@ public abstract class Entity {
     }
 
     // GETTERS AND SETTERS
+
+    public int getHp() {
+        return hp;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
+
     public float getX() {
         return x;
     }
@@ -75,10 +108,10 @@ public abstract class Entity {
     }
 
     public int getCenterX(){
-        return (int) (x - handler.getGameCamera().getxOff());
+        return (int) (x - handler.getGameCamera().getxOff()+ width/2);
     }
     public int getCenterY(){
-        return (int) (y + bounds.y - handler.getGameCamera().getyOff());
+        return (int) (y + bounds.y - handler.getGameCamera().getyOff() + height/2);
     }
 
 }

@@ -1,17 +1,11 @@
 package entities.creatures;
 
-import entities.EntityManager;
-import entities.statics.CampFire;
 import gfx.Animation;
 import gfx.Assets;
-import main.Game;
 import main.Handler;
 
 import java.awt.*;
-import java.awt.geom.AffineTransform;
-import java.awt.geom.Line2D;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
 public class Player extends Creature {
 
@@ -23,8 +17,8 @@ public class Player extends Creature {
         // BOUNDS FOR COLLISION
         bounds.x = 0;
         bounds.y = 0;
-        bounds.width = width - 1;
-        bounds.height = height - 1;
+        bounds.width = width - 2;
+        bounds.height = height - 2;
 
         // ANIMATIONS
         animWalk = new Animation(500, Assets.red_walking);
@@ -38,6 +32,28 @@ public class Player extends Creature {
         getInput();
         move();
         handler.getGameCamera().centerOnEntity(this);
+        // COMBAT
+        checkAttacks();
+    }
+
+    private void checkAttacks() {
+        Rectangle cb = getCollisionBounds(0, 0);// COLLISION BOUNDS RECTANGLE
+        Rectangle ar = new Rectangle();// ATTACK RECTANGLE ( TEMP )
+        int arSize = 20;// SIZE OF AR ( RANGE )
+        ar.width = ar.height = arSize;
+
+        if (handler.getKeyManager().attack) {
+            if (dir == UP) {
+                ar.x = cb.x + cb.width / 2 - arSize / 2;
+                
+            }
+        }
+    }
+
+
+    @Override
+    public void die() {
+        System.out.println("You accepted the whaling call of The Void, enter the inevitable darkness.");
     }
 
     private void getInput() {
@@ -62,28 +78,8 @@ public class Player extends Creature {
         g.fillRect((int)(x + bounds.x - handler.getGameCamera().getxOff()),
                 (int)(y + bounds.y - handler.getGameCamera().getyOff()), bounds.width, bounds.height);
                 */
-        // TESTS
-        int segments = 12;
-        double deg, rad;
-        int x1 = getCenterX();
-        int y1 = getCenterY();
-        double degInc = 360 / segments;
-        deg = 0;
-        int r = 64;
-        int xCent = x1 + getWidth() / 2, yCent = y1 + getWidth() / 2;
-        for (int i = 0; i < segments; i++) {
-            x1 = xCent;
-            y1 = yCent;
-
-            rad = Math.toRadians(deg);
-            x1 = (int) (Math.round(x1 + (r * Math.cos(rad))));
-            y1 = (int) (Math.round(y1 + (r * Math.sin(rad))));
-            g.drawLine(xCent, yCent, x1, y1);
-
-            deg += degInc;
-        }
-        // TESTE
     }
+
 
     private BufferedImage getCurrAnimationFrame() {
         if (xMove < 0)// MOVING LEFT
