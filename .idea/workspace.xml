@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5665101b-b9b1-4566-a0ba-bc65ab0e41b7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/game_00/entities/creatures/Player.class" afterPath="$PROJECT_DIR$/out/production/game_00/entities/creatures/Player.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/entities/creatures/Creature.java" afterPath="$PROJECT_DIR$/src/entities/creatures/Creature.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/entities/creatures/Player.java" afterPath="$PROJECT_DIR$/src/entities/creatures/Player.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,18 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/entities/creatures/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CampFire.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entities/statics/CampFire.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,11 +45,21 @@
       <file leaf-file-name="Creature.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entities/creatures/Creature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="342">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="world_0.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/worlds/world_0.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="World.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/worlds/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+            <state relative-caret-position="162">
+              <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,7 +169,6 @@
         <option value="$PROJECT_DIR$/src/entities/statics/StaticEntity.java" />
         <option value="$PROJECT_DIR$/src/states/GameState.java" />
         <option value="$PROJECT_DIR$/res/worlds/world_0.txt" />
-        <option value="$PROJECT_DIR$/src/worlds/World.java" />
         <option value="$PROJECT_DIR$/src/main/Handler.java" />
         <option value="$PROJECT_DIR$/src/ui/ClickListener.java" />
         <option value="$PROJECT_DIR$/src/ui/UIManager.java" />
@@ -189,6 +186,7 @@
         <option value="$PROJECT_DIR$/src/entities/Entity.java" />
         <option value="$PROJECT_DIR$/src/entities/creatures/Creature.java" />
         <option value="$PROJECT_DIR$/src/entities/creatures/Player.java" />
+        <option value="$PROJECT_DIR$/src/worlds/World.java" />
       </list>
     </option>
   </component>
@@ -232,8 +230,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,7 +339,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,7 +348,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="SearchEverywhereHistoryKey" value="Player&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Player.java&#10;EntityMana&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/EntityManager.java&#10;Camp&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/statics/CampFire.java&#10;Creature&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Creature.java&#10;Key&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/input/KeyManager.java&#10;En&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/EntityManager.java&#10;World&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/worlds/World.java&#10;world&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/res/worlds/world_0.txt&#10;Menu&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/MenuState.java&#10;MenuS&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/MenuState.java&#10;MenuSt&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/MenuState.java&#10;MouseMana&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/input/MouseManager.java&#10;UIM&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/ui/UIManager.java&#10;Asset&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/gfx/Assets.java&#10;Game&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/main/Game.java&#10;Handler&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/main/Handler.java&#10;EntityMan&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/EntityManager.java&#10;Creatu&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Creature.java&#10;Enti&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/Entity.java&#10;Entity&#9;PSI&#9;JAVA://entities.EntityManager&#10;GameS&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/GameState.java&#10;Worl&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/worlds/World.java&#10;GameSta&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/GameState.java&#10;Ass&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/gfx/Assets.java&#10;GameC&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/gfx/GameCamera.java&#10;white&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/tiles/WhiteTile.java&#10;bla&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/tiles/BlackTile.java&#10;Creat&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Creature.java&#10;Play&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Player.java&#10;GameSt&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/GameState.java&#10;Entit&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/Entity.java&#10;handler&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/main/Handler.java&#10;Game &#9;PSI&#9;JAVA://main.Game&#10;state&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/State.java&#10;game &#9;PSI&#9;JAVA://main.Game&#10;player&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Player.java&#10;Tile&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/tiles/Tile.java&#10;game&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/gfx/GameCamera.java&#10;play&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Player.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/worlds/World.java&#10;Player&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Player.java&#10;EntityMana&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/EntityManager.java&#10;Camp&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/statics/CampFire.java&#10;Creature&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Creature.java&#10;Key&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/input/KeyManager.java&#10;En&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/EntityManager.java&#10;World&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/worlds/World.java&#10;world&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/res/worlds/world_0.txt&#10;Menu&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/MenuState.java&#10;MenuS&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/MenuState.java&#10;MenuSt&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/MenuState.java&#10;MouseMana&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/input/MouseManager.java&#10;UIM&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/ui/UIManager.java&#10;Asset&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/gfx/Assets.java&#10;Game&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/main/Game.java&#10;Handler&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/main/Handler.java&#10;EntityMan&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/EntityManager.java&#10;Creatu&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Creature.java&#10;Enti&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/Entity.java&#10;Entity&#9;PSI&#9;JAVA://entities.EntityManager&#10;GameS&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/GameState.java&#10;Worl&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/worlds/World.java&#10;GameSta&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/GameState.java&#10;Ass&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/gfx/Assets.java&#10;GameC&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/gfx/GameCamera.java&#10;white&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/tiles/WhiteTile.java&#10;bla&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/tiles/BlackTile.java&#10;Creat&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Creature.java&#10;Play&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Player.java&#10;GameSt&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/GameState.java&#10;Entit&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/Entity.java&#10;handler&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/main/Handler.java&#10;Game &#9;PSI&#9;JAVA://main.Game&#10;state&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/states/State.java&#10;game &#9;PSI&#9;JAVA://main.Game&#10;player&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Player.java&#10;Tile&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/tiles/Tile.java&#10;game&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/gfx/GameCamera.java&#10;play&#9;FILE&#9;file:///home/jovan/workspace/java/game_00/src/entities/creatures/Player.java" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -481,22 +479,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-18" y="24" width="1368" height="780" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20756646" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21471472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08708709" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18740849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18740849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2897898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2897898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -539,28 +536,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/entities/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-            <element signature="e#2411#2412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/creatures/Creature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tiles/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -747,9 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -813,29 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#929#930#0" expanded="false" />
-            <element signature="e#953#954#0" expanded="false" />
-            <element signature="e#986#987#0" expanded="false" />
-            <element signature="e#1012#1013#0" expanded="false" />
-            <element signature="e#1039#1040#0" expanded="false" />
-            <element signature="e#1063#1064#0" expanded="false" />
-            <element signature="e#1096#1097#0" expanded="false" />
-            <element signature="e#1122#1123#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1179#1180#0" expanded="false" />
-            <element signature="e#1218#1219#0" expanded="false" />
-            <element signature="e#1252#1253#0" expanded="false" />
-            <element signature="e#1282#1283#0" expanded="false" />
-            <element signature="e#1311#1312#0" expanded="false" />
-            <element signature="e#1352#1353#0" expanded="false" />
-            <element signature="e#1388#1389#0" expanded="false" />
-            <element signature="e#1423#1424#0" expanded="false" />
-            <element signature="e#1454#1455#0" expanded="false" />
-            <element signature="e#1503#1504#0" expanded="false" />
-            <element signature="e#1543#1544#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,11 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#712#713#0" expanded="false" />
-            <element signature="e#745#746#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,20 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
           <caret line="49" column="33" lean-forward="false" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#817#818#0" expanded="false" />
-            <element signature="e#862#863#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#953#954#0" expanded="false" />
-            <element signature="e#1046#1047#0" expanded="false" />
-            <element signature="e#1093#1094#0" expanded="false" />
-            <element signature="e#1131#1132#0" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1208#1209#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1305#1306#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -876,19 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="22" column="116" lean-forward="false" selection-start-line="22" selection-start-column="116" selection-end-line="22" selection-end-column="116" />
-          <folding>
-            <element signature="e#850#851#0" expanded="false" />
-            <element signature="e#884#885#0" expanded="false" />
-            <element signature="e#936#937#0" expanded="false" />
-            <element signature="e#971#972#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/worlds/world_0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -896,27 +813,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="56" lean-forward="false" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entities/creatures/LightLines.java" />
     <entry file="file://$PROJECT_DIR$/src/entities/creatures/lighting/LightLine.java" />
-    <entry file="file://$PROJECT_DIR$/src/entities/statics/CampFire.java">
+    <entry file="file://$PROJECT_DIR$/src/entities/creatures/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/input/KeyManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+        <state relative-caret-position="1224">
+          <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
           <folding>
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -963,30 +870,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/worlds/World.java">
+    <entry file="file://$PROJECT_DIR$/src/entities/statics/CampFire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        <state relative-caret-position="432">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input/KeyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/textures/campfire.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/textures/spritesheet.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entities/creatures/Creature.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="342">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/creatures/Player.java">
+    <entry file="file://$PROJECT_DIR$/res/worlds/world_0.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
+        <state relative-caret-position="72">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/worlds/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

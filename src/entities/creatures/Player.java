@@ -70,6 +70,7 @@ public class Player extends Creature {
             } else {
                 return;
             }
+            attackTimer = 0;
 
             for (Entity e : handler.getWorld().getEntityManager().getEntities()) {
                 if(e.equals(this))
@@ -78,7 +79,6 @@ public class Player extends Creature {
                     e.hurt(10);
                     return;
                 }
-                attackTimer = 0;
             }
 
         }
